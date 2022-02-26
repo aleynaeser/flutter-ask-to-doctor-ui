@@ -8,7 +8,7 @@ Widget profileButton() {
       right: padding ,
       child: const Icon(
         Icons.account_circle,
-        color: Colors.white,
+        color: white,
         size:40,
       ),
     );

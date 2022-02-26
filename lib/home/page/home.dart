@@ -1,3 +1,5 @@
+import 'package:ask_app_ui/home/widget/buildCards.dart';
+import 'package:ask_app_ui/home/widget/buildDoctorList.dart';
 import 'package:ask_app_ui/home/widget/buildSearchBar.dart';
 import 'package:ask_app_ui/home/widget/menuButton.dart';
 import 'package:ask_app_ui/home/widget/profileButton.dart';
@@ -28,25 +30,39 @@ class _HomePageState extends State<HomePage> {
           child: Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
-            child: Stack(
-              children: <Widget>[
-                Positioned(
-                    top: -height * .15,
-                    right: -MediaQuery.of(context).size.width * .4,
-                    child: BezierContainer()),
-                profileButton(),
-                menuButton(),
-                SearchBar(),
-                Container(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-
-                    ],
+            child: SingleChildScrollView(
+              child: Stack(
+                children: <Widget>[
+                  Positioned(
+                      top: -height * .15,
+                      right: -MediaQuery.of(context).size.width * .4,
+                      child: BezierContainer()),
+                  profileButton(),
+                  menuButton(),
+                  SearchBar(),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: padding),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(height: height * .3),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        buildCards(),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                        BuildDoctorList(),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

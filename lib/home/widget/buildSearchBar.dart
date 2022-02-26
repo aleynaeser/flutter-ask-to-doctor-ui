@@ -30,7 +30,7 @@ class _SearchBarState extends State<SearchBar> {
           const Padding(
             padding: EdgeInsets.only(bottom: padding),
             child: Text(
-              "Find Appointment",
+              "Ask a Doctor",
               style: TextStyle(color: primary,
               fontWeight: FontWeight.bold, fontSize:subtitleFontSize),
             ),
@@ -42,7 +42,7 @@ class _SearchBarState extends State<SearchBar> {
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     side: BorderSide(width: 4.0, color: primary),
-                    primary: scaffoldColor,
+                    primary: white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12), // <-- Radius
                     ),
@@ -52,7 +52,7 @@ class _SearchBarState extends State<SearchBar> {
                     controller: _editingController,
                     onChanged: (_) => setState(() {}),
                     decoration: InputDecoration(
-                      hintText: 'Search location or speciality...',
+                      hintText: 'Search doctor or appointment ...',
                       hintStyle: TextStyle(color: primary.withOpacity(0.5)),
                       enabledBorder: UnderlineInputBorder(
                         borderSide: const BorderSide(

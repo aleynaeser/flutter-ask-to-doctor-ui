@@ -100,10 +100,6 @@ class builRegisterForm extends StatelessWidget {
               borderSide: const BorderSide(color:secPrimary, width: 2),
               borderRadius: BorderRadius.circular(10.0),
             ),
-            // floatingLabelStyle: TextStyle(
-            //   color: Colors.black,
-            //   fontSize: 18.0,
-            // ),
             focusedBorder: OutlineInputBorder(
               borderSide: const BorderSide(color: primary, width: 1.5),
               borderRadius: BorderRadius.circular(10.0),
