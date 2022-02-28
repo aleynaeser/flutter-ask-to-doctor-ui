@@ -2,14 +2,14 @@ import 'package:ask_app_ui/home/page/home.dart';
 import 'package:ask_app_ui/utils/constant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 Widget loginButton() {
   return Builder(
     builder: (context) {
       return InkWell(
         onTap: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => HomePage()));
+          Navigator.push(context, PageTransition(type: PageTransitionType.scale,alignment: Alignment.topRight,duration: Duration(seconds: 1), child: HomePage()));
         },
         child: Container(
           width: MediaQuery.of(context).size.width,

@@ -2,14 +2,14 @@ import 'package:ask_app_ui/login/screen/register.dart';
 import 'package:ask_app_ui/utils/constant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 Widget registerButton() {
   return Builder(
     builder: (context) {
       return InkWell(
         onTap: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => RegisterPage()));
+          Navigator.push(context, PageTransition(type: PageTransitionType.scale,alignment: Alignment.topRight,duration: Duration(seconds: 1), child: RegisterPage()));
         },
         child: Container(
           width: MediaQuery.of(context).size.width,

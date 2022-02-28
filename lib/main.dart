@@ -21,6 +21,6 @@ class MyApp extends StatelessWidget {
         cursorColor: primary,
       ),
     ),
-    home: HomePage(),
+    home: WelcomePage(),
   );
 }
